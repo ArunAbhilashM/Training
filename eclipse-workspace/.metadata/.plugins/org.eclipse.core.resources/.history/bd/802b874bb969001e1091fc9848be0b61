@@ -1,0 +1,52 @@
+package p3;
+
+public abstract class Pizza {
+    private String type;
+    private String toppings;
+    private String name;
+    private float timeForPreparation;
+    private int costOfPizza;
+    private String size;
+ 
+    public Pizza(String type, String toppings, String name, float timeForPreparation, int costOfPizza, String size) {
+        if (!type.equals("Veg") && !type.equals("Non-Veg")) {
+            System.out.println("Only Veg and Non-Veg type is allowed");
+            return;
+        }
+        if (!size.equals("small") && !size.equals("medium")) {
+            System.out.println("Only small and medium size pizzas are available");
+            return;
+        }
+ 
+        this.type = type;
+        this.toppings = toppings;
+        this.name = name;
+        this.timeForPreparation = timeForPreparation;
+        this.costOfPizza = costOfPizza;
+        this.size = size;
+    }
+ 
+    public abstract int calculateCost();
+    
+    public String getType() {
+        return type;
+    }
+ 
+    public String getSize() {
+        return size;
+    }
+ 
+ 
+    @Override
+    public String toString() {
+        return "Pizza Details: \n" +
+                "Type: " + type + "\n" +
+                "Toppings: " + toppings + "\n" +
+                "Name: " + name + "\n" +
+                "Time for Preparation: " + timeForPreparation + " minutes\n" +
+                "Cost of Pizza: $" + costOfPizza + "\n" +
+                "Size: " + size + "\n" +
+                "Total Cost: $" + calculateCost();
+    }
+}
+ 

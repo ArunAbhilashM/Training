@@ -1,0 +1,36 @@
+package project;
+import java.util.Scanner;
+public class Delivery {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the type of Pizza (Veg or No)");
+	     String type = sc.nextLine();
+
+	        System.out.print("Enter pizza size (Small or Medium): ");
+	        String size = sc.nextLine();
+
+	        System.out.print("Do you want to add toppings (yes or no)? ");
+	        String addToppings = sc.nextLine();
+
+	        String[] toppings = {};
+
+	        if (addToppings.equalsIgnoreCase("yes")) {
+	            System.out.print("Enter toppings (comma-separated): ");
+	            String toppingsInput = sc.nextLine();
+	            toppings = toppingsInput.split(", ");
+	        }
+
+	        ItalianPizza italianPizza = new ItalianPizza(type, toppings, "Italian Pizza", 20, size);
+
+	        int totalCost = italianPizza.calculateCost();
+
+	        System.out.println("Your Italian Pizza details:");
+	        System.out.println(italianPizza.toString());
+	        System.out.println("Total Cost: $" + totalCost);
+
+	        System.out.println("Thank you for ordering from Pizza Delivery!");
+	    }
+	}
+

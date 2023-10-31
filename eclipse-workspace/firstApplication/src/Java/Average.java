@@ -1,0 +1,16 @@
+package Java;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Average {
+    public static void main(String[] args) {
+        List<Integer> numbers = new ArrayList<Integer>();
+        numbers.add(44);
+        numbers.add(22);
+        numbers.add(89);
+        numbers.add(75);
+        numbers.add(99);
+        Double average = numbers.stream().mapToInt(Integer::intValue).average().getAsDouble();
+        System.out.println("Average: " + average);
+    }
+}

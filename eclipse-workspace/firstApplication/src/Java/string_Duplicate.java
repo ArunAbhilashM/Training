@@ -1,0 +1,27 @@
+package Java;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class string_Duplicate {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List <String> strings= new ArrayList <String>();
+		strings.add("Pavan");
+		strings.add("Angam");
+		strings.add("kumar");
+		strings.add("Pavan");
+		strings.add("Reddy");
+		strings.add("Pavan");
+		strings.add("Shree");
+		strings.add("KK");
+		strings.add("KK");
+		strings.add("Badava");
+		 List<String> distinctList = strings.stream().distinct().collect(Collectors.toList());
+		 System.out.println("List: "+strings);
+		 System.out.println("After Duplication Removed: "+ distinctList);
+	}
+
+}

@@ -1,0 +1,12 @@
+package project;
+import java.util.Scanner;
+public class Delivery {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input=new Scanner(System.in);
+		System.out.println("Enter the type of Pizza (Veg or No)");
+		
+	}
+
+}

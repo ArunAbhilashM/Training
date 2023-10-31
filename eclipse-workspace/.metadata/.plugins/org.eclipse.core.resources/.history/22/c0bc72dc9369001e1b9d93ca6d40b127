@@ -1,0 +1,37 @@
+package JDBC_1;
+import java.sql.*;
+
+public class JDBCDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Connection con=null;
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			 con=DriverManager.getConnection
+					("jdbc:mysql://localhost:3306/dummy","root","Addicto@3012");
+			System.out.println("Connection Established...");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Statement s;
+		try {
+			s = con.createStatement();
+			int res=s.executeUpdate("insert into countries(country_id,country_name,region_id) values('CL','Canada',10)");
+			System.out.println(res + " record(s) inserted..");
+			ResultSet rs= s.executeQuery("select emp_id,first_name,last_name from employees");
+			System.out.println("------------");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	}
+
+

@@ -1,0 +1,67 @@
+package Java;
+
+import java.util.*;
+
+class student {
+
+	public ArrayList <String> names = new ArrayList<String>();
+
+	public void setNames()
+
+	{
+
+		names.add("Willam");
+
+		names.add("Jacob");
+
+		names.add("Paul");
+		
+		names.add("Mathew");
+		
+		names.add("Carlsberg");
+
+		}
+
+	public void searchName(String name)
+
+	{
+		if(names.contains(name))
+
+		{
+
+			System.out.println(name +" is in the list");
+
+		}
+
+		else
+
+		{
+
+			System.out.println(name+ "name is not in the list");
+
+		}
+		
+		
+	}
+
+		public static void main(String[] args) {
+
+		student s = new student();
+
+		s.setNames();
+
+		s.searchName("Jacob");
+
+		
+
+		
+
+		
+
+ 
+
+	}
+
+ 
+
+}

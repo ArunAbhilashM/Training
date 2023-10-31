@@ -1,0 +1,28 @@
+package Java;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Strings {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		List<String> strings=new ArrayList<String>();
+//		strings.add("Aamir");
+//		strings.add("Pavan");
+//		strings.add("Shreeman");
+//		strings.add("Arun");
+//		strings.add("Kishore");
+//		String list=strings.stream().map(e->e.toUpperCase()).toList();
+		
+		List<String> strings=new ArrayList<String>();
+		strings.add("hello");
+		strings.add("welcome");
+		strings.add("world");
+		strings.add("hi");
+		String list= strings.stream().map(e->e.toUpperCase()).toList()
+				System.out.println(list);
+		
+	}
+
+}

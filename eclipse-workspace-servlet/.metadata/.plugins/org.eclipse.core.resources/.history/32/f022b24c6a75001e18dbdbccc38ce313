@@ -1,0 +1,14 @@
+package com.example.demo.AdminController.Repository;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.example.demo.AdminController.AdminController;
+
+
+
+
+@Repository
+public interface AdminControllerRepository extends CrudRepository<AdminController,String>{
+ 
+}

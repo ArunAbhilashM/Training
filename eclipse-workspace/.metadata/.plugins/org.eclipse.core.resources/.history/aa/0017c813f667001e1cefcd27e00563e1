@@ -1,0 +1,62 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+class Student {
+    private ArrayList<String> names = new ArrayList<String>();
+
+    public void setNames(String[] studentNames) {
+        for (String name : studentNames) {
+            names.add(name);
+        }
+    }
+
+    public void searchName(String name) {
+        if (names.contains(name)) {
+            System.out.println(name + " is in the list of students.");
+        } else {
+            System.out.println(name + " is not found in the list of students.");
+        }
+    }
+
+    public void searchName(int index) {
+        if (index >= 0 && index < names.size()) {
+            System.out.println("Student at index " + index + ": " + names.get(index));
+        } else {
+            System.out.println("Invalid index.");
+        }
+    }
+
+    public void printNames() {
+        System.out.println("List of students:");
+        for (String name : names) {
+            System.out.println(name);
+        }
+    }
+
+    public void removeName(String stuName) {
+        if (names.contains(stuName)) {
+            names.remove(stuName);
+            System.out.println(stuName + " has been removed from the list of students.");
+        } else {
+            System.out.println(stuName + " is not in the list of students.");
+        }
+    }
+}
+
+public class ArrayListDemo {
+    public static void main(String[] args) {
+        String[] initialNames = { "Alice", "Bob", "Charlie", "David" }; 
+
+        Student student = new Student();
+        student.setNames(initialNames);
+        student.printNames();
+
+        student.searchName("Charlie");
+
+        student.searchName(2);
+
+        student.removeName("Bob");
+
+        student.printNames();
+    }
+}
