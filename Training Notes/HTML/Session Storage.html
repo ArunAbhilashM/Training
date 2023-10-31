@@ -1,0 +1,33 @@
+<html>
+<title>HTML Storage </title>
+<body bgcolor="maroon">
+<script>
+	function saveData()
+		{
+			i=document.forms[0].isbnno.value
+			j=document.forms[0].isbntitle.value
+			console.log(i)
+			console.log(j)
+			sessionStorage.isbn=i
+			sessionStorage.title=j
+			
+		}
+	function getData()
+		{
+			
+			para=document.getElementsByName("data")
+			para[0].innerHTML = sessionStorage.isbn
+			para[1].innerHTML = sessionStorage.title
+		}
+</script>
+<center><h1><u>HTML STORAGE</h1></u></center><br><br>
+<form>
+ISBN: <input type="text" placeholder="Enter the ID" name="isbnno" required /><br><br>
+Title: <input type="text" placeholder="Enter the title of the book" name="isbntitle" required /><br><br>
+<center><input type="button" value="save" onclick="saveData()"/>
+<input type="button" value="Get" onclick="getData()"/>
+<input type="button" value="Reset"/>
+</form></center>
+<p  name="data">Book data</p><br><br>
+<p  name="data">All Books in the Library</p><br><br>
+</body>

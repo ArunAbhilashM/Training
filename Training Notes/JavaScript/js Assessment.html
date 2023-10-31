@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>JavaScript Assessment</title>
+    </head>
+    <script>
+        function validate()
+        {
+            f=document.getElementById("first").value.indexOf("!,@,#,$,%,^,&,*");
+            l=document.getElementById("last").value.indexOf("!,@,#,$,%,^,&,*");
+            p=document.getElementById("postal")
+            ui=document.getElementById("userid").value;
+            pd=document.getElementById("password").value;
+            rd=document.getElementById("retype").value;
+            submitOK=true;
+        }
+        if (f.match(a-zA-z)) 
+        {
+            windows.alert("Special characters not allowed")
+            document.getElementById ("first").focus ()
+            submitOK=false
+        }
+        if (l.match(a-zA-z)) 
+        {
+            windows.alert("Special characters not allowed")
+            document.getElementById ("last").focus ()
+            submitOK=false
+        }
+        if(isNaN(postal)||postal.length<6)
+        {
+            windows.alert("must have 6 characters")
+            document.getElementById("postal").focus()
+            submitOK=false;
+        }
+        if(isNaN(postal)||postal.length<6)
+        {
+            windows.alert("must have 6 characters")
+            document.getElementById("postal").focus()
+            submitOK=false;
+        }
+        if (userID.length < 6) {
+        window.alert("The user ID must be a minimum of 6 characters");
+        document.getElementById("userid").focus();
+        submitOK = false;
+        }
+        if (userID.charAt(0).match(/[^a-zA-Z]/)) 
+        {
+        window.alert("The user ID must start with an alphabet");
+        document.getElementById("userid").focus();
+        submitOK = false;
+        }
+        if (password.length < 8) 
+        {
+        window.alert("The password must be a minimum of 8 characters");
+        document.getElementById("pd").focus();
+        submitOK = false;
+        }
+        if (password.match(/[^a-zA-Z0-9]/)) {
+        window.alert("The password must contain only alphabets and numbers");
+        document.getElementById("pd").focus();
+        submitOK = false;
+        }
+        if (password != retypePassword) {
+        window.alert("The passwords do not match");
+        document.getElementById("rd").focus();
+        submitOK = false;          
+        }
+        if (submitOK) 
+        {
+        window.open("http://www.ndparking.com");
+        return true;
+        }
+    </script>
+    <body>
+        <h1 style="color:red">Tell us about yourself</h1>
+        <h2 style="color:blue">Your Name</h2>
+        <form>
+        <i style="color:magenta" id="first">First name:</i><br>
+        <input type="text" maxlength="25" style="border:1px;border-style:solid" /><br><br>
+        <i style="color:magenta" id="last">Last name:<br></i>
+        <input type="text" maxlength="25"/>
+        <h2 style="color:blue" id="postal">Postal Code</h2>
+        <input type="text"/><br>
+        <h2 style="color:red">Select an ID and Password</h2>
+        <h2 style="color:blue" id="userid">User ID</h2>
+        <input type="text"/>
+        <h2 style="color:blue" id="password">Password</h2>
+        <input type="password"/>
+        <h2 style="color:blue" id="retype">Re-type password</h2>
+        <input type="password"/><br><br>
+        <input type="button" value="Submit" onsubmit="return validate()"/>&nbsp; &nbsp; &nbsp;
+        <input type="button" value="Reset"/>
+    </form>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+
+.food-catalogue {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color:gold;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.food-catalogue h1 {
+  font-size: 28px;
+  margin-bottom: 50px;background-color: magenta;
+}
+
+.food-list {
+  display:-webkit-inline-box;
+  flex-wrap:wrap-reverse;
+  justify-content: center;
+}
+
+.food-item {
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  background-color:chartreuse;
+  border: 5px solid #ccc;
+  border-radius: 5px;
+  cursor:grab;
+  transition: background-color 0.5s, transform 0.5s;
+}
+
+.food-item:hover {
+  background-color: #f0f0f0;
+  transform: translateY(25px);
+}
+
+.selected {
+  background-color: #007bff;
+  color:blanchedalmond;
+  border-color:coral;
+}
+
+.selected:hover {
+  background-color:magenta;
+}
+
+.food-item h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.food-item p {
+  font-size: 16px;
+  color: #333;
+  font-weight:bolder;
+  margin: 0;
+}
+

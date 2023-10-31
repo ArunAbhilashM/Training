@@ -1,0 +1,4 @@
+Shopkeeper modules
+
+Inventory Management - Stocks of medicines in and out, Lincense, Expiry of medicines, 
+CustomerBilling

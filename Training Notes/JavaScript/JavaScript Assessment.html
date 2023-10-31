@@ -1,0 +1,225 @@
+!DOCTYPE html>
+
+<html lang="en">
+
+ 
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Assignment</title>
+
+    <style>
+
+        button {
+
+            cursor: pointer;
+
+            width: 64px;
+
+            height: 28px;
+
+        }
+
+ 
+
+        h1 {
+
+            color: red;
+
+        }
+
+ 
+
+        .blue {
+
+            color: rgb(8, 8, 234);
+
+        }
+
+ 
+
+        #f_name,
+
+        #l_name {
+
+            color: palevioletred;
+
+        }
+
+    </style>
+
+    <script>
+
+        validateForm = () => {
+
+            var username = document.getElementById("username").value;
+
+            var password = document.getElementById("password").value;
+
+            var f_name = document.getElementById("f_name").value;
+
+            var l_name = document.getElementById("l_name").value;
+
+            var p_code = document.getElementById("p_code").value;
+
+            var username = document.getElementById("username").value;
+
+            var password = document.getElementById("password").value;
+
+            var re_password = document.getElementById("re_password").value;
+
+            const usernameRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            const passwordRegex = /^(?=.[A-Za-z])(?=.\d)[A-Za-z\d]{8,}$/;
+
+            const pRegex = /^(?=(?:\D*\d){0,5}\D*$)/;
+
+            const nameRegex = /^[a-zA-Z\s]{1,25}$/;
+
+            if(!f_name,!l_name){
+
+                alert("Names")
+
+            }
+
+            else if (!f_name.match(nameRegex), !l_name.match(nameRegex)) {
+
+                alert("invalid name")
+
+            }
+
+            else if(!p_code){
+
+                alert("enter postal code")
+
+            }
+
+            else if (p_code.length<6) {
+
+                alert("postal code must contain morethanthan 6")
+
+            }
+
+            else if (!username) {
+
+                alert("Enter Username")
+
+            }
+
+            else if (!username.match(usernameRegex)) {
+
+                alert("Enter Valid Username")
+
+            }
+
+            else {
+
+                if (!password) {
+
+                    alert("Enter Password")
+
+                }
+
+                else if (password.length < 8) {
+
+                    alert("Enter Valid Password")
+
+                }
+
+                else if (password !==re_password) {
+
+                    alert("Password is not matching")
+
+                }
+
+                else{
+
+                    window.location.href ="http://www.ndparking.com"
+
+                }
+
+            }
+
+        }
+
+        resetInputs = ()=> {
+
+            document.getElementById("f_name").value = "";
+
+            document.getElementById("l_name").value = "";
+
+            document.getElementById("username").value = "";
+
+            document.getElementById("password").value = "";
+
+            document.getElementById("p_code").value = "";
+
+            document.getElementById("re_password").value = "";
+
+        }
+
+    </script>
+
+</head>
+
+ 
+
+<body>
+
+    <h1> Tell us about yourself</h1>
+
+ 
+
+    <h2 class="yourname blue">Your Name</h2> <br>
+
+    <span >First name:</span><br>
+
+    <input type="text" id="f_name"><br>
+
+    <span >Last name:</span><br>
+
+    <input type="text" id="l_name"><br><br>
+
+    <h2 class="blue" >Postal Code</h2>
+
+    <input type="number" id="p_code">
+
+    <br><br><br>
+
+    <!-- select an id and password -->
+
+    <h1>Select an ID and password</h1>
+
+    <!-- <form action="" onsubmit="validateForm(); return false;"> -->
+
+    <h2 class="u_id blue">User ID</h2>
+
+    <input type="email" name="" id="username"><br>
+
+    <h2 class="pass blue">Password</h2>
+
+    <input type="password" name="" id="password"><br>
+
+    <h2 class="re_pass blue">Re-type Password</h2>
+
+    <input type="password" name="" id="re_password"><br><br>
+
+    <!-- buttons -->
+
+    <button class="submit" onclick="validateForm()">Submit</button>
+
+    <button class="reset" onclick="resetInputs()">Reset</button>
+
+    <!-- </form> -->
+
+ 
+
+</body>
+
+ 
+
+</html>

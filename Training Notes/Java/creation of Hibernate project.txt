@@ -1,0 +1,10 @@
+creation of Hibernate project
+
+maven Project - Console app
+Hibernate Dependencies - Hibernate - MySql Connector
+Set Properties - XML(Configuration),Hiberante Properties
+Configuration - Load all the properties 
+Entity class - java cls representing a single record in a table
+Obtain a session factory - create and open session
+Persist data with session
+Dylate - native query 

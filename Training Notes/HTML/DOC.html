@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>DOM Manupulation</title>
+	<script>
+		function enableDisable()
+		{
+			v=document.forms[0].status.checked;
+			b=document.getElementById("submit1")
+			if(v==true)
+			{
+				b.disabled=false;
+		
+			}
+			else
+			{
+				b.disabled=true;
+			}
+			function showName()
+			{
+			    btag=document.createElement("b");
+				btag.innerHTML=document.forms[0].firstname.value;
+				document.append(btag);
+			}
+		}
+	</script>
+	</head>
+	<body>
+		<form>
+			Name: <input type="text" name="firstname"/><br>
+			Agree to terms and conditons <input type="checkbox" name="status" onclick="enableDisable()"/><br>
+			<input type="button" value="save" id="submit1" onclick="showName()" disabled/>
+	
+		</form>
+		<b id="name">......</b>
+	</body>
+</html>

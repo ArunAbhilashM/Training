@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>DOM Manupulation
+</head>
+<body>
+<form>
+	Name: <input type="text" name="firstname"/><br>
+	Agree to terms and conditons <input type="checkbox" name="status"/><br>
+	<input type="button" value="save" id="submit1"/>
+	
+</form>
+	<b id="name">.......</b>
+</body>
+</html>
